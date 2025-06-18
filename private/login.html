@@ -2,78 +2,84 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Connexion - Espace Privé</title>
+<title>Portail de Compétences</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
 body {
 margin: 0;
-padding: 0;
-background: linear-gradient(135deg, #007bff, #6dd5fa);
-font-family: Arial, sans-serif;
-display: flex;
-justify-content: center;
-align-items: center;
-height: 100vh;
-}
-
-.login-box {
-background-color: white;
-padding: 40px 30px;
-border-radius: 12px;
-box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-text-align: center;
-width: 300px;
-}
-
-h2 {
-margin-bottom: 20px;
-color: #333;
-}
-
-input[type="password"] {
-width: 100%;
-padding: 12px;
-margin: 10px 0 20px 0;
-border: 1px solid #ccc;
-border-radius: 6px;
-font-size: 16px;
-}
-
-button {
-background-color: #007bff;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
 color: white;
-border: none;
-padding: 12px 20px;
-border-radius: 6px;
-cursor: pointer;
-font-size: 16px;
-width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+min-height: 100vh;
+padding: 40px 20px;
 }
 
-.error {
-color: red;
-margin-top: 10px;
+h1 {
+font-size: 36px;
+margin-bottom: 10px;
+color: #00d4ff;
+}
+
+p {
+font-size: 18px;
+margin-bottom: 40px;
+text-align: center;
+max-width: 700px;
+}
+
+.buttons {
+display: flex;
+gap: 30px;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+a.button {
+background: #00d4ff;
+color: #002b45;
+padding: 15px 25px;
+border-radius: 8px;
+text-decoration: none;
+font-size: 18px;
+font-weight: bold;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+transition: 0.3s;
+}
+
+a.button:hover {
+background: #00a5cc;
+transform: translateY(-2px);
+}
+
+footer {
+position: absolute;
+bottom: 20px;
+text-align: center;
+font-size: 14px;
+opacity: 0.6;
+}
+
+.icon {
+margin-right: 8px;
 }
 </style>
 </head>
 <body>
 
-<div class="login-box">
-<h2>🔐 Connexion</h2>
-<input type="password" id="mdp" placeholder="Mot de passe">
-<button onclick="verifier()">Se connecter</button>
-<div id="erreur" class="error"></div>
+<h1>Bienvenue sur mon Portail Professionnel</h1>
+<p>Ce site met en valeur mes compétences, projets réalisés au CFA et mon expérience en entreprise. Il reflète mon parcours dans le domaine de l'informatique.</p>
+
+<div class="buttons">
+<a href="private/login.html" class="button"><i class="fas fa-lock icon"></i> Connexion à l’espace privé</a>
+<a href="#" class="button"><i class="fas fa-file-alt icon"></i> Voir mon CV</a>
 </div>
 
-<script>
-function verifier() {
-const mdp = document.getElementById("mdp").value;
-if (mdp === "cfa2025") {
-window.location.href = "index.html";
-} else {
-document.getElementById("erreur").innerText = "Mot de passe incorrect.";
-}
-}
-</script>
+<footer>
+© 2025 - Réalisé dans le cadre du Hackathon CFA
+</footer>
 
 </body>
 </html>
